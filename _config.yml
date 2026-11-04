@@ -2,7 +2,6 @@
 baseurl: ""
 url: "https://habichta.github.io/"
 permalink: /:title.html
-remote_theme: mmistakes/so-simple-theme
 
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
@@ -51,6 +50,9 @@ theme_settings:
 # BUILD SETTINGS
 markdown: kramdown
 highlighter: rouge
+sass:
+  sass_dir: _sass
+  style: :compressed
 plugins:
   - jekyll-redirect-from
 exclude:
