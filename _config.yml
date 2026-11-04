@@ -1,16 +1,16 @@
 # SITE CONFIGURATION
 baseurl: ""
-url: "https://habichta.github.io/"
+url: "https://habichta.com"
 permalink: /:title.html
 
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
   # Meta
-  title: habichta
-  avatar:
+  title: Arthur Habicht
+  avatar: assets/img/avatar.jpg
   favicon: assets/favicon.ico
   gravatar: # Email MD5 hash
-  description: "Personal website of habichta" # used by search engines
+  description: "Arthur Habicht, co-founder and CTO of Helpany. Expert in software engineering, production-grade machine learning and Physical AI, based in Zurich." # used by search engines
 
   # Header and footer text
   header_text: Welcome
@@ -21,7 +21,8 @@ theme_settings:
   rss: false
   email_address: "habichta.shore104@passmail.net" # Full email address, e.g. "sam@example.com"
   github: "habichta"
-  linkedin: "https://www.linkedin.com/in/habichta/" # Full URL
+  huggingface: "habichta"
+  linkedin: "https://www.linkedin.com/in/arthur-habicht-16546240/" # Full URL
 
   # Scripts
   google_analytics: # Tracking ID, e.g. "UA-000000-01"
@@ -55,7 +56,13 @@ sass:
   style: :compressed
 plugins:
   - jekyll-redirect-from
+  - jekyll-sitemap
 exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+defaults:
+  - scope:
+      path: "assets/CV.pdf"
+    values:
+      sitemap: false

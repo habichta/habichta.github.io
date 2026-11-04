@@ -38,6 +38,42 @@
   .excerpt {
     margin-top: 1em;
   }
+  .post-teaser {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+  }
+  .teaser-text {
+    flex: 1;
+    min-width: 0;
+  }
+  .teaser-title {
+    font-size: 1.2em;
+    margin: 0;
+  }
+  .meta {
+    margin: 0.2em 0;
+    font-size: 0.85em;
+  }
+  .teaser-summary {
+    margin: 0;
+  }
+  .teaser-arrow {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5em;
+    height: 2.5em;
+    border: 1px solid;
+    border-radius: 50%;
+    &:hover {
+      background: $link-color;
+      border-color: $link-color;
+      color: $background-color;
+      text-decoration: none;
+    }
+  }
 }
 // Pagination
 .pagination .button {

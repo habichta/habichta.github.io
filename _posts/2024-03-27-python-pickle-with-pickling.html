@@ -1,0 +1,86 @@
+---
+layout: post
+title: "Python Multiprocessing: Having a Pickle with Pickling"
+date: 2024-03-27 21:25:36 +0000
+description: "Pickling is one of the most used serialization protocols specific to Python."
+tags: [Python]
+---
+<img src="{{ site.baseurl }}/assets/img/blog/python-pickle-with-pickling/pickled_python-1.webp" alt="Python Multiprocessing: Having a Pickle with Pickling"><p><em>Pickling</em> is one of the most used serialization protocols specific to Python. It is popular due to its ease ouf use, as virtually all Python objects can be serialized to a bytestream and written on disk or sent over a network.</p><figure class="kg-card kg-image-card"><img src="{{ site.baseurl }}/assets/img/blog/python-pickle-with-pickling/written_by_human-2-1.png" class="kg-image" alt="Python Multiprocessing: Having a Pickle with Pickling" loading="lazy" width="150" height="150"></figure><p>Originally, the term is derived from the process of pickling food for preservation. Similarly, we want to &quot;Python&quot; objects, usually in a <code>.pickle</code> file for later use. For many, that&apos;s the only place where they directly encounter pickling. However, it happens in many places under the hood. Without realizing, we may use it and since our program seems to run just fine, why bother? In somewhat typical Python fashion: <em>Out of mind, out of sight</em>. Python is supposed to be an easy language right?</p><p>Not so. If you care about speed and efficiency, it is important to understand what happens beyond the single line of Python code that does so much. I know I mentioned speed and Python in a single sentence (how dare you?). We need to keep in mind, that at the time of writing, large parts of the world are running on Python. Especially since the meteoric rise of modern machine learning and AI<a href="#fn1" rel="noreferrer"><sup>[1]</sup></a>. So we should pay attention.</p><h2 id="a-pickle-stuck-in-a-pipe">A Pickle stuck in a Pipe</h2>
+<p>There are physical limitations when trying to increase the clock speed of CPUs (Central Processing Units). Therefore, chip manufacturers have resorted to increasing the number of cores in CPUs, allowing for parallel processing of instructions (rather than processing them faster). The most widely used implementation of Python (CPython) is not well suited for this kind of programming paradigm due to the Global Interpreter Lock (GIL)<a href="#fn2" rel="noreferrer"><sup>[2]</sup></a> that prevents Python programs (or threads) from ending up in race conditions.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="{{ site.baseurl }}/assets/img/blog/python-pickle-with-pickling/python_racecondition-1-1.webp" class="kg-image" alt="Python Multiprocessing: Having a Pickle with Pickling" loading="lazy" width="300" height="300"><figcaption><span style="white-space: pre-wrap;">Without the GIL, Python might get tangled up...</span></figcaption></figure><p>This is a major issue since Python is used for many applications in scientific computing that rely on parallel computations to crunch enormous amount of numbers (most notably applications in AI and high-performance computing). </p><p>For this reason, many programmers resort to spinning up multiple processes (with their independent Python instances) and employing inter-process communication (IPC) techniques (e.g, Pipes or Networking Sockets) to coordinate those processes to work together on a computation. This paradigm has multiple downsides. Here is a quote:</p><blockquote>
+<p>In PyTorch, Python is commonly used to orchestrate ~8 GPUs and ~64 CPU threads, growing to 4k GPUs and 32k CPU threads for big models. While the heavy lifting is done outside of Python, the speed of GPUs makes even just the orchestration in Python not scalable. We often end up with 72 processes in place of one because of the GIL. Logging, debugging, and performance tuning are orders-of-magnitude more difficult in this regime, continuously causing lower developer productivity.<br>
+-- Zachary DeVito, PyTorch core developer and researcher at FAIR (Meta AI)</p>
+</blockquote>
+<p>Processes are not nimble entities and come with a lot of overhead. Also, making those processes communicate over IPC can be slow. This is where pickling enters the scene.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="{{ site.baseurl }}/assets/img/blog/python-pickle-with-pickling/python_process-1-1.webp" class="kg-image" alt="Python Multiprocessing: Having a Pickle with Pickling" loading="lazy" width="300" height="300"><figcaption><span style="white-space: pre-wrap;">Python processes are heavy-weight...</span></figcaption></figure><p>Unbeknownst to many, popular methods for IPC (of the &quot;message-passing&quot; variant) such as <code>multiprocessing.Queue</code> use pickling in the background. As data gets sent from one process to another, it needs to be serialized into a bytestream and then deserialized again<a href="#fn3" rel="noreferrer"><sup>[3]</sup></a>. It is well known, that this is not exactly efficient<a href="#fn4" rel="noreferrer"><sup>[4]</sup></a>.</p><h2 id="shared-memory-to-the-rescue">Shared Memory to the Rescue</h2>
+<p>I would like to offer an interesting alternative. We won&apos;t get rid of processes (in favor of light-weight threads, this will take a couple of years until Python is capable of doing that. Note that C API Extension for Python can release the GIL for long running processes. However, this does not fully replace &quot;true&quot; multi-threading) for our CPU-bound computations. However, we can get rid of that pickle. Below I present a simplified solution of using <em>shared memory</em> for IPC. Shared Memory allows processes to access the same memory region rather than sending each other messages. </p><p>The example we will look at aims to do the following: </p><ul><li>Create a custom <code>SharedMemoryProcessPool</code> class that can accept workloads (tasks) and assign them to a pool of worker processes. We want to minimize the pickling overhead though <code>SharedMemory</code> as much as possible.</li><li>Make sure that the dispatched workloads (&quot;futures&quot;) remain in order. I do this by using a normal <code>queue</code> (not a multi-processing queue!). These to not use any pickling.</li><li>We restrict our workload to <code>numpy</code> arrays. But this is not a hard requirement.</li><li>Both input array and output array are shared via <code>SharedMemory</code>. Note that the <code>future</code> only returns a <code>bool</code>, not the result of the computation. Futures use pickling in the background and we want to avoid transmitting potentially large amounts of data (the result of the tasks). We settle for returning a single <code>bool</code> (which will be pickled) and use it as a sentinel.</li></ul><p>The snippet below shows a custom class <code>SharedMemoryProcessPool</code>. It accepts workloads through its <code>put</code> function. I assumed that work will happen on a <code>numpy</code> array <code>arr</code> for which the function creates a Shared Memory region using the <code>multiprocessing.shared_memory</code> module. The memory for the result of the task is pre-allocated as well. The reason for this is that we cannot easily allocate it dynamically in the worker process because we will get a segmentation fault as the memory region seems to be de-allocated as soon as the worker process finishes the task.</p><p>There is no free lunch. Pickling offers you more flexibility at the cost of efficiency. However, if you can specify your workloads (in terms of memory requirements) then using shared memory is a good option. With the implementation below I achieved a speed up of almost 50% compared to a simple implementation using futures (without shared memory).</p><figure class="kg-card kg-code-card"><pre><code class="language-Python">class SharedMemoryProcessPool:
+    def __init__(self) -&gt; None:
+        self.executor = ProcessPoolExecutor(max_workers=4)
+        self.task_queue = queue.Queue()
+
+    def put(self, func, arr, task_type):
+
+        shm = SharedMemory(create=True, size=arr.nbytes)
+        shm_result = SharedMemory(create=True, size=task_type.result_bytes)
+        copy_array_to_shared_memory(arr, shm.name, arr.shape, arr.dtype)
+        self.task_queue.put(
+            (
+                shm,
+                shm_result,
+                task_type,
+                self.executor.submit(
+                    func,
+                    shm.name,
+                    arr.shape,
+                    arr.dtype,
+                    shm_result.name,
+                    task_type.result_shape,
+                    task_type.result_dtype,
+                ),
+            )
+        )
+
+    def get(self):
+        input_shm: SharedMemory
+        f: Future
+        input_shm, result_shm, task_type, f = self.task_queue.get()
+
+        result, success = None, False
+        try:
+            success = f.result()
+
+            if success:
+                result = np.array(
+                      np.ndarray(shape=task_type.result_shape, dtype=task_type.result_dtype, buffer=result_shm.buf)
+                )
+
+            return result, success
+
+        finally:
+            deallocate_shared_memory(input_shm)
+            deallocate_shared_memory(result_shm)
+
+    def empty(self):
+        return self.task_queue.empty()
+
+    def _clear_task_queue(self):
+        while not self.task_queue.empty():
+            input_shm, result_shm, _, future = self.task_queue.get()
+            future.cancel()
+            deallocate_shared_memory(input_shm)
+            deallocate_shared_memory(result_shm)
+
+    def shutdown(self):
+        self._clear_task_queue()
+        self.executor.shutdown()</code></pre><figcaption><p><span style="white-space: pre-wrap;">See </span><a href="https://gist.github.com/habichta/9adccab9cbcf0ae7c0b136e2866e5dd2" rel="noreferrer"><span style="white-space: pre-wrap;">GitHub</span></a><span style="white-space: pre-wrap;"> for full code</span></p></figcaption></figure>
+<!--kg-card-begin: html-->
+<p>
+  <a name="fn1" class="text-like-link" style="color: inherit; text-decoration: none;" href="https://www.statista.com/statistics/793628/worldwide-developer-survey-most-used-languages/">[1] See Statista 2023.</a>
+  <br>
+  <a name="fn2" class="text-like-link" style="color: inherit; text-decoration: none;" href="https://peps.python.org/pep-0703/">[2] There seems to be recent work going on trying to remove the GIL from CPython (PEP 0703). The rollout of such can only happen gradually, because many important Python libraries implicitly depend on the GIL. Simply removing it would break a lot of stuff.</a>
+<br>
+  <a name="fn3" class="text-like-link" style="color: inherit; text-decoration: none;" href="https://docs.python.org/3/library/multiprocessing.html#pipes-and-queues">[3] Documentation for Pipes and Queues in the multiprocessing library</a>
+<br>
+ <a name="fn4" class="text-like-link" style="color: inherit; text-decoration: none;" href="https://www.benfrederickson.com/dont-pickle-your-data/">[4] Don&apos;t pickle your data</a>
+</p>
+
+<!--kg-card-end: html-->
+

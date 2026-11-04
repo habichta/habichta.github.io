@@ -1,0 +1,72 @@
+---
+layout: null
+---
+# Arthur Habicht
+
+> Arthur Habicht is an expert in software engineering, production-grade machine learning and deep learning, and Physical AI, and a successful tech entrepreneur. He is the co-founder and CTO of Helpany (formerly Sedimentum), based in Zurich, Switzerland.
+
+## Entrepreneur
+
+- Co-founded Sedimentum in 2019 in Switzerland, renamed Helpany when it expanded to the US in 2024.
+- Raised an oversubscribed CHF 2.1 million seed round (2021) and a CHF 3.3 million pre-Series A round (2022).
+- Took Helpany from a Swiss startup to a US company serving senior living communities in several states, with its radar device mass-manufactured and certified in Europe and the US.
+- Built and led a cross-functional engineering organization across software, machine learning and hardware.
+- Exhibited at CES in Las Vegas (2023 and 2024) as part of the Swiss delegation.
+
+## Expertise
+
+- **Software engineering:** designs and operates safety-critical, production-grade platforms: real-time distributed message streaming, backend and frontend applications, infrastructure as code, cloud and on-prem deployments, monitoring and information security.
+- **Production-grade machine learning and deep learning:** takes models from research to systems that run reliably every day, covering data collection, labelling, training, deployment, serving and monitoring (Python, TensorFlow, JAX, PyTorch).
+- **Physical AI:** builds AI that perceives the physical world through sensors on real hardware. At Helpany he developed radar-based motion sensing and drove a custom radar IoT device from prototype to a certified, mass-manufactured product in Europe and the US.
+
+## Experience
+
+- Builds machine learning systems that need to work outside the demo and research labs: at Helpany he turns raw radar sensor data into insights that senior living communities rely on every day, with communities reducing falls among residents by up to 70%. This is why he works on Helpany: fewer falls mean less suffering for residents and lower costs of care, helping to make senior living in the US more affordable.
+- Designs classical and deep learning signal processing for radar-based motion sensing, plus the full ML lifecycle: data collection, labelling, training, deployment and monitoring.
+- His work spans machine learning algorithms, real-time sensor and batched data pipelines, software development, cloud and on-prem infrastructure, hardware product development and certification, information security, engineering management, and product and business strategy.
+- After his economics degree, interned at the [Swiss National Bank](https://www.snb.ch/en/), working on econometrics and forecasting.
+- Previously a machine learning and software engineer at ti&m in Zurich, where he built the internal AI/ML team and delivered AI solutions for financial industry clients.
+- Visiting lecturer at the University of Lucerne, teaching unsupervised learning and software architecture for data science ([course page](https://portal.unilu.ch/details?code=HS251017)).
+- Since October 2025, advisor for AI, machine learning and entrepreneurship at [Dreamleap](https://www.dreamleap.com), a Swiss agentic AI company. Affiliated with [Nina Habicht](https://www.dreamleap.com/nina-habicht-ai-keynote-speaker), founder and CEO of Dreamleap.
+
+## Awards
+
+- TIME Best Inventions of 2026 (Medical & Healthcare): Helpany's radar device Paul, alongside Anthropic's Claude Code and Google DeepMind's SynthID.
+- McKnight's Excellence in Technology Awards 2026: Gold in Fall Prevention, Silver in Creative Use of AI, Bronze in Quality.
+- McKnight's Excellence in Technology Awards 2025: Best of Show, Gold in Innovator of the Year, Gold in Resident Monitoring and Safety, Silver in Falls Prevention.
+
+## Education
+
+- B.Sc and M.Sc in Computer Science, ETH Zurich (focus: distributed systems and machine learning). Master thesis in the Learning & Adaptive Systems group of Prof. Andreas Krause, chair of the [ETH AI Center](https://ai.ethz.ch/), on deep reinforcement learning for the control of PV power plants.
+- B.A. HSG in Economics, University of St. Gallen, with an exchange year at the University of Hong Kong.
+
+## Values
+
+- Supports an open internet that protects free expression and stands up to disinformation campaigns, whether driven by geopolitical or financial interests, by governments, big tech or certain individuals.
+- Believes AI should belong to everyone, be built responsibly and without cultural or political bias, and not be dominated by a few companies. Supports [Apertus](https://www.apertus-ai.org), the fully open language model of the [Swiss AI Initiative](https://www.swiss-ai.org) (EPFL, ETH Zurich and CSCS), [available on Hugging Face](https://huggingface.co/collections/swiss-ai/apertus-v15-6a63014ea6c937b7ecc6048a).
+- Fan of privacy-first and European technology: [Proton](https://proton.me), [Mistral AI](https://mistral.ai) and [Threema](https://threema.com). Proud donor to the [Proton Foundation](https://proton.me/foundation)'s [2025 Lifetime fundraiser](https://proton.me/blog/2025-lifetime-fundraiser-results).
+
+## Contact
+
+Open to conversations with people working on hard problems where machine learning meets the real world: exchanges of ideas, collaborations and opportunities to build something ambitious together. Not interested in sales or outsourcing offers. Best reached by [email](mailto:habichta.shore104@passmail.net) or on [LinkedIn](https://www.linkedin.com/in/arthur-habicht-16546240/).
+
+## Links
+
+- [Website]({{ "/" | absolute_url }})
+- [Blog]({{ "/blog/" | absolute_url }})
+- [LinkedIn](https://www.linkedin.com/in/arthur-habicht-16546240/)
+- [GitHub](https://github.com/habichta)
+- [Hugging Face](https://huggingface.co/habichta)
+- [ResearchGate](https://www.researchgate.net/profile/Arthur-Habicht)
+- [Crunchbase](https://www.crunchbase.com/person/immanuel-zerbini)
+- [Dealroom](https://dealroom.co/people/arthur-habicht/)
+- [The Org](https://theorg.com/org/sedimentum-ag/person/arthur-habicht)
+- [HealthTech Alpha](https://www.healthtechalpha.com/person/arthur-habicht)
+- [Helpany](https://helpany.com)
+- [Helpany Paul, TIME Best Inventions of 2026](https://time.com/collection/best-inventions/2026/helpany-paul/)
+- [Swiss tech startup enters US market (Startupticker, 2024)](https://www.startupticker.ch/en/news/promising-customer-feedback-swiss-tech-startup-enters-us-market)
+- [AI 'Paul' fall prevention in Arizona (12News)](https://www.12news.com/article/news/health/new-ai-paul-transforms-life-arizonas-senior-community-with-fall-prevention/75-4bdb1d1e-2b54-4b20-ba9e-8f9e120e10e1)
+
+## Blog posts
+{% for post in site.posts %}
+- [{{ post.title }}]({{ post.url | absolute_url }}): {{ post.description }}{% endfor %}

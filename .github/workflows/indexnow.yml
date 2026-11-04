@@ -1,0 +1,25 @@
+name: IndexNow
+
+# Tells Bing (and through it ChatGPT search, Yandex, Seznam, Naver) about every
+# page in the sitemap right after GitHub Pages finishes a deploy.
+on:
+  page_build:
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Submit sitemap URLs
+        env:
+          HOST: habichta.com
+          KEY: 2da0e473ed2b03151b35f596dc3a0831
+        run: |
+          sleep 30
+          urls=$(curl -fsSL "https://$HOST/sitemap.xml" | grep -o '<loc>[^<]*' | sed 's/<loc>//' | jq -R . | jq -s .)
+          jq -n --arg host "$HOST" --arg key "$KEY" --argjson urls "$urls" \
+            '{host: $host, key: $key, keyLocation: "https://\($host)/\($key).txt", urlList: $urls}' > payload.json
+          cat payload.json
+          curl -fsS -X POST https://api.indexnow.org/indexnow \
+            -H 'Content-Type: application/json; charset=utf-8' \
+            --data @payload.json -w '\nHTTP %{http_code}\n'

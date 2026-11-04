@@ -2,7 +2,7 @@
 	<meta charset="utf-8">
 	<title>{% if page.title %}{{ page.title }} |{% endif %} {{ site.theme_settings.title }}</title>
 	<meta name="description"
-		content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.theme_settings.description }}{% endif %}">
+		content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.theme_settings.description }}{% endif %}">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- CSS -->
@@ -10,9 +10,21 @@
 
 	<!--Favicon-->
 	<link rel="shortcut icon" href="{{ site.baseurl }}/{{ site.theme_settings.favicon }}" type="image/x-icon">
+	<link rel="icon" type="image/png" sizes="192x192" href="{{ "/assets/img/favicon-192.png" | relative_url }}">
+	<link rel="apple-touch-icon" href="{{ "/assets/img/apple-touch-icon.png" | relative_url }}">
+
+	<!-- Social previews -->
+	{% capture og_desc %}{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.theme_settings.description }}{% endif %}{% endcapture %}
+	<meta property="og:site_name" content="{{ site.theme_settings.title }}">
+	<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.theme_settings.title }}{% endif %}">
+	<meta property="og:description" content="{{ og_desc | strip }}">
+	<meta property="og:url" content="{{ page.url | replace:'index.html','' | absolute_url }}">
+	<meta property="og:type" content="{% if page.date %}article{% else %}profile{% endif %}">
+	<meta property="og:image" content="{{ site.theme_settings.avatar | absolute_url }}">
+	<meta name="twitter:card" content="summary">
 
 	<!-- Canonical -->
-	<link rel="canonical" href="{{ page.url | replace:'index.html','' | relative_url }}">
+	<link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 
 	<!-- RSS -->
 	<link rel="alternate" type="application/atom+xml" title="{{ site.theme_settings.title }}"
@@ -52,6 +64,42 @@
 
 		ga('create', '{{ site.theme_settings.google_analytics }}', 'auto');
 		ga('send', 'pageview');
+	</script>
+	{% endif %}
+	{% if page.url == "/" %}
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Person",
+		"name": "Arthur Habicht",
+		"url": "{{ "/" | absolute_url }}",
+		"image": "{{ site.theme_settings.avatar | absolute_url }}",
+		"jobTitle": "Co-founder and CTO",
+		"description": "Expert in software engineering, production-grade machine learning and deep learning, and Physical AI. Tech entrepreneur, co-founder and CTO of Helpany, whose radar device Paul was named one of TIME's Best Inventions of 2026.",
+		"knowsAbout": ["Software engineering", "Machine learning", "Deep learning", "MLOps", "Physical AI", "Artificial intelligence", "Radar signal processing", "Reinforcement learning", "Data pipelines", "Cloud infrastructure", "IoT", "Entrepreneurship", "Open-source AI", "Privacy"],
+		"award": [
+			"TIME Best Inventions of 2026 (Helpany Paul)",
+			"McKnight's Excellence in Technology Awards 2026: Gold, Fall Prevention; Silver, Creative Use of AI; Bronze, Quality",
+			"McKnight's Excellence in Technology Awards 2025: Best of Show; Gold, Innovator of the Year; Gold, Resident Monitoring and Safety; Silver, Falls Prevention"
+		],
+		"worksFor": { "@type": "Organization", "name": "Helpany", "url": "https://helpany.com" },
+		"alumniOf": [
+			{ "@type": "CollegeOrUniversity", "name": "ETH Zurich" },
+			{ "@type": "CollegeOrUniversity", "name": "University of St. Gallen" }
+		],
+		"email": "mailto:habichta.shore104@passmail.net",
+		"address": { "@type": "PostalAddress", "addressLocality": "Zurich", "addressCountry": "CH" },
+		"sameAs": [
+			"https://www.linkedin.com/in/arthur-habicht-16546240/",
+			"https://github.com/habichta",
+			"https://huggingface.co/habichta",
+			"https://www.researchgate.net/profile/Arthur-Habicht",
+			"https://www.crunchbase.com/person/immanuel-zerbini",
+			"https://dealroom.co/people/arthur-habicht/",
+			"https://theorg.com/org/sedimentum-ag/person/arthur-habicht",
+			"https://www.healthtechalpha.com/person/arthur-habicht"
+		]
+	}
 	</script>
 	{% endif %}
 </head>
