@@ -14,7 +14,7 @@ layout: default
         <p class="teaser-summary">{{ post.description | default: post.excerpt | strip_html | truncatewords: 30 }}</p>
       </div>
       <a class="teaser-arrow" href="{{ post.url | relative_url }}" aria-label="{{ site.theme_settings.str_continue_reading }}: {{ post.title }}">
-        <i class="fas fa-arrow-right"></i>
+        {% include icon.html name="arrow-right" %}
       </a>
     </div>
     {% endfor %}

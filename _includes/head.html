@@ -6,7 +6,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- CSS -->
-	<link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+	<!-- Inlined so the first paint needs no extra request -->
+	<style>{% capture main_scss %}@import "type-theme";{% endcapture %}{{ main_scss | scssify }}</style>
+	<link rel="preload" href="{{ "/assets/fonts/source-sans-pro-400.woff2" | relative_url }}" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="{{ "/assets/fonts/source-sans-pro-700.woff2" | relative_url }}" as="font" type="font/woff2" crossorigin>
 
 	<!--Favicon-->
 	<link rel="shortcut icon" href="{{ site.baseurl }}/{{ site.theme_settings.favicon }}" type="image/x-icon">
@@ -30,13 +33,12 @@
 	<link rel="alternate" type="application/atom+xml" title="{{ site.theme_settings.title }}"
 		href="{{ "/feed.xml" | relative_url }}" />
 
-	<!-- Font Awesome -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-		integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
 	<!-- Google Fonts -->
 	{% if site.theme_settings.google_fonts %}
-	<link href="//fonts.googleapis.com/css?family={{ site.theme_settings.google_fonts }}" rel="stylesheet"
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css?family={{ site.theme_settings.google_fonts }}&display=swap" rel="stylesheet"
 		type="text/css">
 	{% endif %}
 
@@ -72,6 +74,9 @@
 		"@context": "https://schema.org",
 		"@type": "Person",
 		"name": "Arthur Habicht",
+		"givenName": "Arthur",
+		"familyName": "Habicht",
+		"disambiguatingDescription": "Zurich-based computer scientist and tech entrepreneur, co-founder and CTO of Helpany (formerly Sedimentum), ETH Zurich and HSG alumnus.",
 		"url": "{{ "/" | absolute_url }}",
 		"image": "{{ site.theme_settings.avatar | absolute_url }}",
 		"jobTitle": "Co-founder and CTO",
