@@ -67,3 +67,7 @@ defaults:
       path: "assets/CV.pdf"
     values:
       sitemap: false
+  - scope:
+      path: "ai_gets_physical_arthur_habicht_november_2026.pdf"
+    values:
+      sitemap: false

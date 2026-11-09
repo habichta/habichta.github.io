@@ -14,17 +14,16 @@ Before Helpany I worked as a machine learning and software engineer at [ti&m](ht
 I hold a B.Sc and M.Sc in Computer Science from [ETH Zurich](https://ethz.ch/en.html), with a focus on distributed systems and machine learning. I wrote my master thesis in the [Learning & Adaptive Systems group](https://las.inf.ethz.ch/) of [Prof. Andreas Krause](https://las.inf.ethz.ch/krausea), chair of the [ETH AI Center](https://ai.ethz.ch/), on deep reinforcement learning with real-world data for the control of PV power plants. Before ETH, I earned a B.A. HSG in Economics from the [University of St. Gallen](https://www.unisg.ch), including an exchange year at the [University of Hong Kong](https://www.hku.hk). After HSG, I interned at the [Swiss National Bank](https://www.snb.ch/en/), working on econometrics and forecasting.
 
 <div style="display: flex; align-items: center; gap: 2.5em; flex-wrap: wrap; margin: 1em 0 1.5em;">
-  <a href="https://ethz.ch/en.html"><img src="/assets/img/eth-logo.svg" alt="ETH Zurich" width="168" height="28" style="height: 28px;"></a>
-  <a href="https://www.unisg.ch"><img src="/assets/img/hsg-logo.svg" alt="University of St. Gallen (HSG)" width="212" height="44" style="height: 44px;"></a>
+  <a href="https://ethz.ch/en.html"><img src="/assets/img/eth-logo.svg" alt="ETH Zurich" width="144" height="24" style="height: 24px; width: auto; display: block;"></a>
+  <a href="https://www.unisg.ch"><img src="/assets/img/hsg-logo.svg" alt="University of St. Gallen (HSG)" width="173" height="36" style="height: 36px; width: auto; display: block;"></a>
 </div>
 
 <h2>Currently working on</h2>
 
-<ul class="publication-list">
+<ul class="publication-list no-indent">
   <li>
-    <a href="https://helpany.com"><strong>Helpany</strong></a>: Radar-based safety platform for senior living, from a certified, mass-manufactured IoT device to real-time sensor data processing, ML model serving and customer-facing applications. Named one of <a href="https://time.com/collection/best-inventions/2026/helpany-paul/">TIME's Best Inventions of 2026</a> alongside Anthropic's <a href="https://claude.com/product/claude-code">Claude Code</a> and Google DeepMind's <a href="https://deepmind.google/models/synthid/">SynthID</a>.
-    <span style="display: block; margin-top: 0.5em;">Why I work on it: communities using our platform have reduced falls among their residents by up to 70%. Fewer falls mean less suffering for residents and their families, and lower costs for the communities caring for them, which helps make senior living in the US more affordable.</span>
-    <a style="display: block; margin-top: 0.5em;" href="https://helpany.com"><img src="/assets/img/helpany-logo.png" alt="Helpany" width="154" height="40" style="height: 40px;"></a>
+    <a href="https://helpany.com"><img src="/assets/img/helpany-logo.png" alt="Helpany" width="77" height="20" style="height: 20px; width: auto; vertical-align: middle; margin-right: 0.35em;"></a> Radar-based safety platform for senior living, from a certified, mass-manufactured IoT device to real-time sensor data processing, ML model serving and customer-facing applications. Named one of <a href="https://time.com/collection/best-inventions/2026/helpany-paul/">TIME's Best Inventions of 2026</a> alongside Anthropic's <a href="https://claude.com/product/claude-code">Claude Code</a> and Google DeepMind's <a href="https://deepmind.google/models/synthid/">SynthID</a>.
+    <span style="display: block; margin-top: 0.5em;"><strong>Why I work on it:</strong> communities using our platform have reduced falls among their residents by up to 70%. Fewer falls mean less suffering for residents and their families, and lower costs for the communities caring for them, which helps make senior living in the US more affordable.</span>
   </li>
 </ul>
 
@@ -60,6 +59,12 @@ I hold a B.Sc and M.Sc in Computer Science from [ETH Zurich](https://ethz.ch/en.
     <a href="https://dallasinnovates.com/innovators-with-dfw-ties-claim-8-spots-on-times-list-of-best-inventions-for-2026/"><strong>Innovators with DFW ties claim 8 spots on TIME’s list of Best Inventions for 2026</strong></a>
     <span class="presentation">Dallas Innovates, 20 October 2026</span>
   </li>
+</ul>
+
+<details class="more-news">
+  <summary>Show 15 more articles</summary>
+
+<ul class="publication-list">
   <li>
     <a href="https://leadingage.org/fall-prevention-advanced-by-proposed-federal-study-and-ai-tool/"><strong>Fall prevention advanced by proposed federal study and AI tool</strong></a>
     <span class="presentation">LeadingAge, 10 June 2026</span>
@@ -68,12 +73,6 @@ I hold a B.Sc and M.Sc in Computer Science from [ETH Zurich](https://ethz.ch/en.
     <a href="https://www.azfamily.com/2026/03/05/arizona-senior-communities-are-using-ai-prevent-falls-heres-how-it-works/"><strong>Arizona senior communities are using AI to prevent falls; here’s how it works</strong></a>
     <span class="presentation">Arizona’s Family (3TV/CBS 5), Generation AI, 4 March 2026</span>
   </li>
-</ul>
-
-<details class="more-news">
-  <summary>Show 13 more articles</summary>
-
-<ul class="publication-list">
   <li>
     <a href="https://www.axios.com/local/phoenix/2026/02/20/ai-motion-detector-paul-falls-assisted-living"><strong>How AI helps prevent falls at Arizona senior living facilities</strong></a>
     <span class="presentation">Axios Phoenix, 20 February 2026</span>
@@ -128,6 +127,21 @@ I hold a B.Sc and M.Sc in Computer Science from [ETH Zurich](https://ethz.ch/en.
   </li>
 </ul>
 </details>
+
+<h2>Talks</h2>
+
+<ul class="publication-list">
+  <li>
+    <a href="/ai_gets_physical_arthur_habicht_november_2026.pdf" download="Arthur-Habicht-AI-Gets-Physical-Timisoara-Summit-2026.pdf"><strong>AI Gets Physical</strong> — download the slides (PDF)</a>
+    <span class="presentation"><a href="https://timisoarafoodsummit.ro/">Timisoara Summit 2026</a> — “Robotics, AI and space technologies at Polytechnic University of Timișoara”, November 2026</span>
+    <span style="display: block; margin-top: 0.5em;">On Physical AI: how we build a radar device in this space at Helpany, and why Europe should build its own AI stack.</span>
+  </li>
+  <li>
+    <a href="https://www.voicetechhub.com/ai-board-night"><strong>Executive AI Board Night</strong> (panel discussion)</a>
+    <span class="presentation">by <a href="https://www.dreamleap.com">dreamleap</a></span>
+    <span style="display: block; margin-top: 0.5em;">Unleash the power of AI agents and move from pilot to production.</span>
+  </li>
+</ul>
 
 <h2>Contact me</h2>
 
@@ -225,6 +239,11 @@ I'm always glad to hear from people working on hard problems where machine learn
   ul.publication-list li span.presentation {
     display: block;
     color: #68767a;  /* Sets color for secondary details */
+  }
+
+  ul.publication-list.no-indent li {
+    border-left: none;  /* No vertical border */
+    padding-left: 0;    /* No indentation, like a normal paragraph */
   }
   a.follow-btn {
     display: table;
