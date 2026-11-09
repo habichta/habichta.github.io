@@ -2,8 +2,10 @@
   @extend %padding-small;
   background: $brand-color;
   border-bottom: 1px solid $border-color;
-  display: inline-block;
-  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
   width: 100%;
   @media (min-width: 1100px) {
     padding-left: 20%;
@@ -14,21 +16,60 @@
     color: $header-link-color;
   }
 
+  .branding {
+    display: flex;
+    align-items: center;
+  }
+
   .avatar {
     height: 2em;
     width: 2em;
-    float: left;
-    margin-top: -3px;
     border-radius: 50%;
     object-fit: cover;
     margin-right: 1em;
   }
 
   .site-title {
-    float: left;
+    margin: 0;
     font-weight: bold;
     font-size: 1em;
     line-height: 1.5;
+    white-space: nowrap;
+  }
+
+  .title-logos {
+    display: flex;
+    align-items: center;
+    gap: 1.1em;
+    margin-left: 1.5em;
+    padding-left: 1.5em;
+    border-left: 1px solid $border-color;
+    @media (max-width: 600px) {
+      gap: 0.8em;
+      margin-left: 0.9em;
+      padding-left: 0.9em;
+    }
+
+    a {
+      display: flex;
+    }
+
+    img {
+      width: auto;
+    }
+
+    // Heights differ so the marks read at the same visual weight
+    .logo-helpany {
+      height: 1.2em;
+    }
+
+    .logo-eth {
+      height: 0.8em;
+    }
+
+    .logo-hsg {
+      height: 1.2em;
+    }
   }
 
   .site-nav {
@@ -37,23 +78,19 @@
       padding: 0;
       list-style: none;
       line-height: 1.5;
-      float: right;
-      text-align: right;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 1.25em;
     }
     li {
-      display: inline;
-      margin-right: 1em;
-      vertical-align: middle;
-      &:last-of-type {
-        margin-right: 0;
-      }
+      display: flex;
     }
     @media (max-width: 1100px) {
+      width: 100%;
       ul {
-        display: inline-block;
-        float: left;
         padding-top: $padding-small;
-        text-align: left;
+        justify-content: flex-start;
         width: 100%;
       }
     }

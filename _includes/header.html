@@ -6,12 +6,17 @@
 		</a>
 		{% elsif site.theme_settings.avatar %}
 		<a href="{{ site.baseurl }}/" aria-label="Home">
-			<img class="avatar" src="{{ "/assets/img/avatar-96.jpg" | relative_url }}" alt="" width="96" height="96"/>
+			<img class="avatar" src="{{ "/assets/img/avatar-72.webp" | relative_url }}" alt="" width="72" height="72"/>
 		</a>
 		{% endif %}
 		<h1 class="site-title">
 			<a href="{{ site.baseurl }}/">{{ site.theme_settings.title }}</a>
 		</h1>
+		<span class="title-logos">
+			<a href="https://helpany.com" aria-label="Helpany"><img class="logo-helpany" src="{{ "/assets/img/helpany-heart.webp" | relative_url }}" alt="Helpany" width="55" height="54"></a>
+			<a href="https://ethz.ch/en.html" aria-label="ETH Zurich"><img class="logo-eth" src="{{ "/assets/img/eth-logo.svg" | relative_url }}" alt="ETH Zurich" width="192" height="32"></a>
+			<a href="https://www.unisg.ch" aria-label="University of St. Gallen (HSG)"><img class="logo-hsg" src="{{ "/assets/img/hsg-logo.svg" | relative_url }}" alt="University of St. Gallen (HSG)" width="90" height="100"></a>
+		</span>
 	</div>
 	<nav class="site-nav">
 		<ul>

@@ -13,21 +13,16 @@ Before Helpany I worked as a machine learning and software engineer at [ti&m](ht
 
 I hold a B.Sc and M.Sc in Computer Science from [ETH Zurich](https://ethz.ch/en.html), with a focus on distributed systems and machine learning. I wrote my master thesis in the [Learning & Adaptive Systems group](https://las.inf.ethz.ch/) of [Prof. Andreas Krause](https://las.inf.ethz.ch/krausea), chair of the [ETH AI Center](https://ai.ethz.ch/), on deep reinforcement learning with real-world data for the control of PV power plants. Before ETH, I earned a B.A. HSG in Economics from the [University of St. Gallen](https://www.unisg.ch), including an exchange year at the [University of Hong Kong](https://www.hku.hk). After HSG, I interned at the [Swiss National Bank](https://www.snb.ch/en/), working on econometrics and forecasting.
 
-<div style="display: flex; align-items: center; gap: 2.5em; flex-wrap: wrap; margin: 1em 0 1.5em;">
-  <a href="https://ethz.ch/en.html"><img src="/assets/img/eth-logo.svg" alt="ETH Zurich" width="144" height="24" style="height: 24px; width: auto; display: block;"></a>
-  <a href="https://www.unisg.ch"><img src="/assets/img/hsg-logo.svg" alt="University of St. Gallen (HSG)" width="173" height="36" style="height: 36px; width: auto; display: block;"></a>
-</div>
-
-<h2>Currently working on</h2>
+<h2 id="currently-working-on" style="display: flex; align-items: center; gap: 0.6em; flex-wrap: wrap;">Currently working on <a href="https://helpany.com"><img src="/assets/img/helpany-logo.webp" alt="Helpany" width="104" height="27" style="height: 1em; width: auto; display: block;"></a><a class="anchor" href="#currently-working-on" aria-label="Copy link to this section">#</a></h2>
 
 <ul class="publication-list no-indent">
   <li>
-    <a href="https://helpany.com"><img src="/assets/img/helpany-logo.png" alt="Helpany" width="77" height="20" style="height: 20px; width: auto; vertical-align: middle; margin-right: 0.35em;"></a> Radar-based safety platform for senior living, from a certified, mass-manufactured IoT device to real-time sensor data processing, ML model serving and customer-facing applications. Named one of <a href="https://time.com/collection/best-inventions/2026/helpany-paul/">TIME's Best Inventions of 2026</a> alongside Anthropic's <a href="https://claude.com/product/claude-code">Claude Code</a> and Google DeepMind's <a href="https://deepmind.google/models/synthid/">SynthID</a>.
+    Radar-based safety platform for senior living, from a certified, mass-manufactured IoT device to real-time sensor data processing, ML model serving and customer-facing applications. Named one of <a href="https://time.com/collection/best-inventions/2026/helpany-paul/">TIME's Best Inventions of 2026</a> alongside Anthropic's <a href="https://claude.com/product/claude-code">Claude Code</a> and Google DeepMind's <a href="https://deepmind.google/models/synthid/">SynthID</a>.
     <span style="display: block; margin-top: 0.5em;"><strong>Why I work on it:</strong> communities using our platform have reduced falls among their residents by up to 70%. Fewer falls mean less suffering for residents and their families, and lower costs for the communities caring for them, which helps make senior living in the US more affordable.</span>
   </li>
 </ul>
 
-<h2>Awards</h2>
+<h2 id="awards">Awards<a class="anchor" href="#awards" aria-label="Copy link to this section">#</a></h2>
 
 <ul class="publication-list">
   <li>
@@ -44,7 +39,7 @@ I hold a B.Sc and M.Sc in Computer Science from [ETH Zurich](https://ethz.ch/en.
   </li>
 </ul>
 
-<h2>Helpany in the news</h2>
+<h2 id="helpany-in-the-news">Helpany in the news<a class="anchor" href="#helpany-in-the-news" aria-label="Copy link to this section">#</a></h2>
 
 <ul class="publication-list">
   <li>
@@ -128,7 +123,7 @@ I hold a B.Sc and M.Sc in Computer Science from [ETH Zurich](https://ethz.ch/en.
 </ul>
 </details>
 
-<h2>Talks</h2>
+<h2 id="talks">Talks<a class="anchor" href="#talks" aria-label="Copy link to this section">#</a></h2>
 
 <ul class="publication-list">
   <li>
@@ -143,11 +138,11 @@ I hold a B.Sc and M.Sc in Computer Science from [ETH Zurich](https://ethz.ch/en.
   </li>
 </ul>
 
-<h2>Contact me</h2>
+<h2 id="contact-me">Contact me<a class="anchor" href="#contact-me" aria-label="Copy link to this section">#</a></h2>
 
 I'm always glad to hear from people working on hard problems where machine learning meets the real world, whether it's an exchange of ideas, a collaboration or an opportunity to build something ambitious together. Write me an [email](mailto:habichta.shore104@passmail.net) or connect on [LinkedIn](https://www.linkedin.com/in/arthur-habicht-16546240/); my code lives on [GitHub](https://github.com/habichta). I don't take sales or outsourcing pitches.
 
-<h2>GitHub contributions</h2>
+<h2 id="github-contributions">GitHub contributions<a class="anchor" href="#github-contributions" aria-label="Copy link to this section">#</a></h2>
 
 <div style="text-align: center;">
   <a href="https://github.com/habichta">
@@ -171,7 +166,7 @@ I'm always glad to hear from people working on hard problems where machine learn
   <a href="https://lumo.proton.me"><img loading="lazy" src="/assets/img/footer/lumo.svg" alt="Lumo by Proton" width="24" height="24" style="height: 24px;"></a>
   <a href="https://mistral.ai"><img loading="lazy" src="/assets/img/footer/mistral.svg" alt="Mistral AI" width="28" height="20" style="height: 20px;"></a>
   <a href="https://threema.com"><img loading="lazy" src="/assets/img/footer/threema.svg" alt="Threema" width="107" height="13" style="height: 13px;"></a>
-  <a href="https://www.swiss-ai.org"><img loading="lazy" src="/assets/img/footer/swiss-ai.png" alt="Swiss AI Initiative" width="54" height="32" style="height: 32px;"></a>
+  <a href="https://www.swiss-ai.org"><img loading="lazy" src="/assets/img/footer/swiss-ai.webp" alt="Swiss AI Initiative" width="54" height="32" style="height: 32px;"></a>
   <a href="https://www.apertus-ai.org"><img loading="lazy" src="/assets/img/footer/apertus.svg" alt="Apertus" width="123" height="12" style="height: 12px;"></a>
   <a href="https://huggingface.co/collections/swiss-ai/apertus-v15-6a63014ea6c937b7ecc6048a"><img loading="lazy" src="/assets/img/footer/huggingface.svg" alt="Apertus on Hugging Face" width="98" height="26" style="height: 26px;"></a>
 </div>
@@ -265,9 +260,51 @@ I'm always glad to hear from people working on hard problems where machine learn
     font-size: 1.5em;
   }
 
+  h2 a.anchor {
+    visibility: hidden;
+    margin-left: 0.4em;
+    color: #9aa7ad;
+    font-size: 0.6em;
+    font-weight: normal;
+    text-decoration: none;
+    vertical-align: middle;
+  }
+
+  h2:hover a.anchor,
+  h2 a.anchor:focus-visible {
+    visibility: visible;
+  }
+
   details.more-news summary {
     cursor: pointer;
     color: #2475b5;
     margin: 0.5em 0 1em;
   }
 </style>
+
+<script>
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest ? e.target.closest('a.anchor') : null;
+    if (!a) return;
+    e.preventDefault();
+    var hash = a.getAttribute('href');
+    var url = location.origin + location.pathname + hash;
+    var feedback = function () {
+      var old = a.textContent;
+      a.textContent = 'copied';
+      setTimeout(function () { a.textContent = old; }, 1200);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(feedback, feedback);
+    } else {
+      var t = document.createElement('textarea');
+      t.value = url;
+      document.body.appendChild(t);
+      t.select();
+      try { document.execCommand('copy'); } catch (err) {}
+      document.body.removeChild(t);
+      feedback();
+    }
+    if (history.replaceState) history.replaceState(null, '', hash);
+  });
+</script>
