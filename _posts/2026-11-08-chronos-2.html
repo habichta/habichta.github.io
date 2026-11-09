@@ -1,0 +1,19 @@
+---
+layout: post
+title: "AI Chronicles II: Chronos-2, or How I Stopped Babysitting My Time Series"
+date: 2026-11-08 21:45:00 +0000
+description: "One model per time series? Chronos-2 thinks that is so last paradigm. A short and only mildly informed look at foundation models for forecasting."
+tags: [AI]
+---
+<img src="{{ site.baseurl }}/assets/img/blog/chronos-2/header.webp" alt="AI Chronicles II: Chronos-2"><p>One model per time series? Chronos-2 thinks that is so last paradigm. A short and only mildly informed look at foundation models for forecasting.</p><figure class="kg-card kg-image-card"><img src="{{ site.baseurl }}/assets/img/blog/generative-inflation/written_by_human-1.png" class="kg-image" alt="AI Chronicles II: Chronos-2" loading="lazy" width="150" height="150"></figure><p>For decades, time series forecasting was run like a daycare with a very strict staffing ratio: every single series got its own model, lovingly fitted, tuned and burped by a sleep-deprived data scientist.</p>
+<figure class="kg-card kg-image-card kg-card-hascaption"><img src="{{ site.baseurl }}/assets/img/blog/chronos-2/local-models.webp" class="kg-image" alt="AI Chronicles II: Chronos-2" loading="lazy" width="300" height="300"><figcaption><span style="white-space: pre-wrap;">Local models: one model per time series. Sleep is optional.</span></figcaption></figure><p>Then came pretrained &quot;foundation models&quot;, which according to Ansari et al. triggered nothing less than a paradigm shift<sup>1</sup>: instead of training a model for each time series (local models) or for each dataset (task-specific models), you train one big model and let it do the forecasting for everyone. The latest of these is Chronos-2, named after the Greek personification of time<sup>2</sup>, who presumably got tired of waiting for our hyperparameter searches to finish.</p>
+<figure class="kg-card kg-image-card kg-card-hascaption"><img src="{{ site.baseurl }}/assets/img/blog/chronos-2/foundation-model.webp" class="kg-image" alt="AI Chronicles II: Chronos-2" loading="lazy" width="300" height="300"><figcaption><span style="white-space: pre-wrap;">A foundation model, holding all your time series at once. It does not need coffee.</span></figcaption></figure><p>The title promises a journey &quot;from univariate to universal&quot;, the most ambitious glow-up since my Excel trendline started calling itself AI. Think of it as a fortune teller who has read so many tea leaves that your particular cup no longer surprises it. I have only made it through page one so far, so please treat this post as a forecast with very wide confidence intervals<sup>3</sup>.</p>
+<!--kg-card-begin: html-->
+<p>
+  <a name="fn1" class="text-like-link" style="color: inherit; text-decoration: none;" href="https://arxiv.org/abs/2510.15821">[1] Ansari et al. (2025): Chronos-2: From Univariate to Universal Forecasting. A rare case where &quot;paradigm shift&quot; was not written to get a grant approved.</a>
+  <br>
+  <a name="fn2" class="text-like-link" style="color: inherit; text-decoration: none;">[2] Not to be confused with Cronus, the Titan who ate his own children. Easy mix-up, very different evaluation metrics.</a>
+  <br>
+  <a name="fn3" class="text-like-link" style="color: inherit; text-decoration: none;">[3] See the orange cone in the header image. The wider the cone, the harder it is to be wrong.</a>
+</p>
+<!--kg-card-end: html-->
