@@ -2,7 +2,7 @@
 layout: page
 ---
 
-Hi, I'm Arthur Habicht, co-founder and CTO of [Helpany](https://helpany.com) and an engineer working on [Physical AI](https://www.nvidia.com/en-us/glossary/generative-physical-ai/) and production-grade machine learning systems.
+Hi, I'm Arthur Habicht, [ETH Zurich](https://ethz.ch/en.html) alumnus with a focus on Artificial Intelligence, co-founder and CTO of [Helpany](https://helpany.com), and an engineer working on [Physical AI](https://www.nvidia.com/en-us/glossary/generative-physical-ai/) and production-grade machine learning systems.
 {: .intro-lead}
 
 I build machine learning systems that need to work outside the demo and research labs. At Helpany, that means turning raw sensor data into insights that senior living communities rely on every day. What I enjoy most is the moment a piece of technology stops being a prototype and becomes a product people trust.
@@ -33,11 +33,18 @@ I hold a B.Sc and M.Sc in Computer Science from [ETH Zurich](https://ethz.ch/en.
     <a href="https://helpany.com/blog-post/a-triple-win-for-helpany-gold-silver-and-bronze-at-the-mcknights-tech-awards/"><strong>McKnight's Excellence in Technology Awards 2026</strong></a>: Gold in Fall Prevention, Silver in Creative Use of AI, Bronze in Quality.
     <span class="presentation">McKnight's, 2026</span>
   </li>
+</ul>
+
+<details class="more-news">
+  <summary>Show 1 more award</summary>
+
+<ul class="publication-list">
   <li>
     <a href="https://www.mcknights.com/features/innovators-top-adopters-are-honored-in-expanded-annual-tech-awards-program/"><strong>McKnight's Excellence in Technology Awards 2025</strong></a>: Best of Show, Gold in Innovator of the Year, Gold in Resident Monitoring and Safety, Silver in Falls Prevention.
     <span class="presentation">McKnight's, 2025</span>
   </li>
 </ul>
+</details>
 
 <h2 id="helpany-in-the-news">Helpany in the news<a class="anchor" href="#helpany-in-the-news" aria-label="Copy link to this section">#</a></h2>
 
@@ -50,16 +57,16 @@ I hold a B.Sc and M.Sc in Computer Science from [ETH Zurich](https://ethz.ch/en.
     <a href="https://azbigmedia.com/business/time-names-helpany-fall-prevention-system-a-best-invention/"><strong>TIME names Helpany fall-prevention system a ‘Best Invention’</strong></a>
     <span class="presentation">AZ Big Media, 5 November 2026</span>
   </li>
+</ul>
+
+<details class="more-news">
+  <summary>Show 16 more articles</summary>
+
+<ul class="publication-list">
   <li>
     <a href="https://dallasinnovates.com/innovators-with-dfw-ties-claim-8-spots-on-times-list-of-best-inventions-for-2026/"><strong>Innovators with DFW ties claim 8 spots on TIME’s list of Best Inventions for 2026</strong></a>
     <span class="presentation">Dallas Innovates, 20 October 2026</span>
   </li>
-</ul>
-
-<details class="more-news">
-  <summary>Show 15 more articles</summary>
-
-<ul class="publication-list">
   <li>
     <a href="https://leadingage.org/fall-prevention-advanced-by-proposed-federal-study-and-ai-tool/"><strong>Fall prevention advanced by proposed federal study and AI tool</strong></a>
     <span class="presentation">LeadingAge, 10 June 2026</span>
@@ -127,16 +134,31 @@ I hold a B.Sc and M.Sc in Computer Science from [ETH Zurich](https://ethz.ch/en.
 
 <ul class="publication-list">
   <li>
-    <a href="/ai_gets_physical_arthur_habicht_november_2026.pdf" download="Arthur-Habicht-AI-Gets-Physical-Timisoara-Summit-2026.pdf"><strong>AI Gets Physical</strong> — download the slides (PDF)</a>
-    <span class="presentation"><a href="https://timisoarafoodsummit.ro/">Timisoara Summit 2026</a> — “Robotics, AI and space technologies at Polytechnic University of Timișoara”, November 2026</span>
-    <span style="display: block; margin-top: 0.5em;">On Physical AI: how we build a radar device in this space at Helpany, and why Europe should build its own AI stack.</span>
+    <a href="/ai_gets_physical_arthur_habicht_november_2026.pdf" download="Arthur-Habicht-AI-Gets-Physical-Timisoara-Summit-2026.pdf"><strong>AI Gets Physical</strong> - download the slides (PDF)</a>
+    <span class="presentation"><a href="https://timisoarafoodsummit.ro/">Timisoara Summit 2026</a> - “Robotics, AI and space technologies at Polytechnic University of Timișoara”, November 2026</span>
+    <span style="display: block; margin-top: 0.5em;">On Physical AI: how we build a radar device in this space at Helpany, and why Europe builds its independent AI infrastructure.</span>
   </li>
   <li>
     <a href="https://www.voicetechhub.com/ai-board-night"><strong>Executive AI Board Night</strong> (panel discussion)</a>
-    <span class="presentation">by <a href="https://www.dreamleap.com">dreamleap</a></span>
+    <span class="presentation">by <a href="https://www.dreamleap.com">dreamleap</a>, Zurich, Switzerland, May 2026</span>
     <span style="display: block; margin-top: 0.5em;">Unleash the power of AI agents and move from pilot to production.</span>
   </li>
 </ul>
+
+<details class="more-news">
+  <summary>Show 2 more talks</summary>
+
+<ul class="publication-list">
+  <li>
+    <a href="https://bucharestfoodsummit.ro/"><strong>AI Technology and Its Influence on Business in Romania and Central and South-Eastern Europe</strong></a>
+    <span class="presentation">Workshop, Academy of Economic Studies (ASE), Bucharest, May 2026</span>
+  </li>
+  <li>
+    <a href="https://swisstext.org/archive/2019/wp-content/uploads/2019/06/SwissText2019_booklet.pdf"><strong>Corporate Sustainability Assessment (ESG) with Modern Natural Language Processing</strong></a>
+    <span class="presentation">SwissText at ZHAW, Zurich, Switzerland, June - with Ursin Brunner</span>
+  </li>
+</ul>
+</details>
 
 <h2 id="contact-me">Contact me<a class="anchor" href="#contact-me" aria-label="Copy link to this section">#</a></h2>
 
@@ -280,6 +302,22 @@ I'm always glad to hear from people working on hard problems where machine learn
     color: #2475b5;
     margin: 0.5em 0 1em;
   }
+
+  /* once expanded, the only toggle is the button below the list */
+  details.more-news.has-show-less[open] > summary {
+    display: none;
+  }
+
+  details.more-news button.show-less {
+    display: block;
+    margin: 0.5em 0 1em;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: #2475b5;
+    font: inherit;
+    cursor: pointer;
+  }
 </style>
 
 <script>
@@ -306,5 +344,19 @@ I'm always glad to hear from people working on hard problems where machine learn
       feedback();
     }
     if (history.replaceState) history.replaceState(null, '', hash);
+  });
+
+  document.querySelectorAll('details.more-news').forEach(function (d) {
+    var less = document.createElement('button');
+    less.type = 'button';
+    less.className = 'show-less';
+    less.textContent = 'Show less';
+    less.addEventListener('click', function () {
+      d.open = false;
+      // the list above collapsed, keep the toggle on screen
+      d.scrollIntoView({ block: 'nearest' });
+    });
+    d.appendChild(less);
+    d.classList.add('has-show-less');
   });
 </script>
