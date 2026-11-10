@@ -50,6 +50,10 @@ I hold a B.Sc and M.Sc in Computer Science from [ETH Zurich](https://ethz.ch/en.
 
 <ul class="publication-list">
   <li>
+    <a href="https://www.azfamily.com/2026/11/17/arizona-companys-ai-system-keeping-residents-safe-senior-living-homes/"><strong>Arizona company’s AI system keeping residents safe at senior living homes</strong></a>
+    <span class="presentation">Arizona’s Family (3TV/CBS 5), 17 November 2026</span>
+  </li>
+  <li>
     <a href="https://time.com/collection/best-inventions/2026/helpany-paul/"><strong>Helpany Paul: The Best Inventions of 2026</strong></a>
     <span class="presentation">TIME, 2026</span>
   </li>
@@ -155,7 +159,7 @@ I hold a B.Sc and M.Sc in Computer Science from [ETH Zurich](https://ethz.ch/en.
   </li>
   <li>
     <a href="https://swisstext.org/archive/2019/wp-content/uploads/2019/06/SwissText2019_booklet.pdf"><strong>Corporate Sustainability Assessment (ESG) with Modern Natural Language Processing</strong></a>
-    <span class="presentation">SwissText at ZHAW, Zurich, Switzerland, June - with Ursin Brunner</span>
+    <span class="presentation">SwissText at ZHAW, Zurich, Switzerland - with Ursin Brunner</span>
   </li>
 </ul>
 </details>
@@ -180,7 +184,7 @@ I'm always glad to hear from people working on hard problems where machine learn
 
 <p class="page-footnote page-footnote-cont">
   I believe in an open internet that protects free expression and stands up to disinformation campaigns, whether they are driven by geopolitical or financial interests, by governments, big tech or certain individuals.
-  AI should belong to everyone and be built responsibly and without cultural or political bias. Neither should it be dominated by a few companies. That is why I support <a href="https://www.apertus-ai.org">Apertus</a>, the open language model of the <a href="https://www.swiss-ai.org">Swiss AI Initiative</a>, available on <a href="https://huggingface.co/collections/swiss-ai/apertus-v15-6a63014ea6c937b7ecc6048a">Hugging Face</a>.
+  AI should belong to everyone and be built responsibly and without cultural or political bias. Neither should it be dominated by a few companies or unreliable actors. That is why I support <a href="https://www.apertus-ai.org">Apertus</a>, the open language model of the <a href="https://www.swiss-ai.org">Swiss AI Initiative</a>, available on <a href="https://huggingface.co/collections/swiss-ai/apertus-v15-6a63014ea6c937b7ecc6048a">Hugging Face</a>.
 </p>
 
 <div class="footer-logos">
