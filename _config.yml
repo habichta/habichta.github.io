@@ -20,6 +20,7 @@ theme_settings:
   # Icons
   rss: false
   email_address: "habichta.shore104@passmail.net" # Full email address, e.g. "sam@example.com"
+  codeberg: "habichta"
   github: "habichta"
   huggingface: "habichta"
   linkedin: "https://www.linkedin.com/in/arthur-habicht-16546240/" # Full URL

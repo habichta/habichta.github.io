@@ -54,6 +54,14 @@
 </li>
 {% endif %}
 
+{% if site.theme_settings.codeberg %}
+<li>
+	<a href="https://codeberg.org/{{ site.theme_settings.codeberg }}" title="{{ site.theme_settings.str_follow_on }} Codeberg">
+		{% include icon.html name="codeberg" %}
+	</a>
+</li>
+{% endif %}
+
 {% if site.theme_settings.github %}
 <li>
 	<a href="https://github.com/{{ site.theme_settings.github }}" title="{{ site.theme_settings.str_follow_on }} GitHub">

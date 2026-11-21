@@ -179,7 +179,7 @@ I'm always glad to hear from people working on hard problems where machine learn
 
 <p class="page-footnote">
   I <span style="color: #e25555;" role="img" aria-label="love">{% include icon.html name="heart" %}</span> <a href="https://proton.me">Proton</a>, <a href="https://mistral.ai">Mistral AI</a> and <a href="https://threema.com">Threema</a>.
-  Proud donor to the <a href="https://proton.me/foundation">Proton Foundation</a>'s <a href="https://proton.me/blog/2025-lifetime-fundraiser-results">2025 Lifetime fundraiser</a>.
+  Proud donor to the <a href="https://proton.me/foundation">Proton Foundation</a>.
 </p>
 
 <p class="page-footnote page-footnote-cont">
@@ -195,6 +195,7 @@ I'm always glad to hear from people working on hard problems where machine learn
   <a href="https://www.swiss-ai.org"><img loading="lazy" src="/assets/img/footer/swiss-ai.webp" alt="Swiss AI Initiative" width="54" height="32" style="height: 32px;"></a>
   <a href="https://www.apertus-ai.org"><img loading="lazy" src="/assets/img/footer/apertus.svg" alt="Apertus" width="123" height="12" style="height: 12px;"></a>
   <a href="https://huggingface.co/collections/swiss-ai/apertus-v15-6a63014ea6c937b7ecc6048a"><img loading="lazy" src="/assets/img/footer/huggingface.svg" alt="Apertus on Hugging Face" width="98" height="26" style="height: 26px;"></a>
+  <a href="https://codeberg.org/habichta"><img loading="lazy" src="/assets/img/footer/codeberg.svg" alt="Codeberg" width="24" height="24" style="height: 24px;"></a>
 </div>
 
 <style>
